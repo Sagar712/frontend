@@ -32,6 +32,46 @@ button:active{
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.loadingOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#spinn{
+    animation: spining 1s ease-in-out infinite;
+    opacity: 1;
+}
+.loadingOverlay.active{
+    display: flex;
+}
+
+@keyframes spining{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+.shownotif{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 4rem;
+    width: 7rem;
+    
+}
+
 table{
     margin-top: 3rem;
     width: 60%;

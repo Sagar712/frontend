@@ -2,10 +2,11 @@
 let whoup = 0;
 let allres = [];
 const AppUrl = 'https://secret-script.herokuapp.com/script/';
-
+let spinner = document.querySelector(".loadingOverlay");
 
 function fetchall() {
     
+    spinner.classList.add("active");
     let form = document.querySelector(".formss");
     form.classList.remove("active");
     let table = document.querySelector(".tablss");
@@ -19,6 +20,7 @@ function fetchall() {
         return res.json();
     })
     .then(response => {
+        spinner.classList.remove("active");
         allres = response;
         let tbl = document.getElementById("tablee");
         let str="<tr><th>Name</th><th>Username</th><th>password</th></tr>";
@@ -35,6 +37,7 @@ function fetchall() {
 
 
 function switchwer() {
+    
     let form = document.querySelector(".formss");
     form.classList.add("active");
     let table = document.querySelector(".tablss");
@@ -43,6 +46,7 @@ function switchwer() {
     form2.classList.remove("active");
 }
 function switchwer2() {
+    
     let form = document.querySelector(".formss2");
     form.classList.add("active");
     let table = document.querySelector(".tablss");
@@ -54,7 +58,7 @@ function submited() {
     let name = document.getElementById("name").value;
     let email1 = document.getElementById("uname").value;
     let pass = document.getElementById("pass").value;
-
+    spinner.classList.add("active");
     const data = {
         username: name,
         email: email1,
@@ -67,21 +71,23 @@ function submited() {
         return res.json();
     })
     .then(response => {
+        spinner.classList.remove("active");
         console.log(response);
+
     });
 }
 
 function deleted() {
+    spinner.classList.add("active");
     let name = document.getElementById("name2").value;
-    fetch(AppUrl+name,{method:'delete', onprogress:function(){
-        console.log("processing...");
-    }})
+    fetch(AppUrl+name,{method:'delete'})
     .then(res => {
         return res.json();
     })
     .then(response => {
+        spinner.classList.remove("active");
         console.log(response);
-    })
+    });
 }
 
 
