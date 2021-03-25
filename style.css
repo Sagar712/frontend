@@ -58,32 +58,12 @@ button:active{
         transform: rotate(0deg);
     }
     to{
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
     }
 }
 
-.shownotif{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 4rem;
-    width: 7rem;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-.shownotif.active{
-    animation: shonotifcation 0.5s linear ;
-}
-@keyframes shonotifcation{
-    from{
-        display: flex;
-    }
-    to{
-        display: none;
-    }
-}
+
+
 
 
 table{

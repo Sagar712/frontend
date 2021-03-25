@@ -74,8 +74,7 @@ function submited() {
     .then(response => {
         spinner.classList.remove("active");
         console.log(response);
-        document.getElementById("msgg") = response;
-        notif.classList.add("active");
+        alert(response.msg);
     });
 }
 
@@ -89,6 +88,7 @@ function deleted() {
     .then(response => {
         spinner.classList.remove("active");
         console.log(response);
+        alert(response.msg)
     });
 }
 
