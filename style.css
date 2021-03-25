@@ -69,8 +69,22 @@ button:active{
     transform: translate(-50%,-50%);
     height: 4rem;
     width: 7rem;
-    
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
+.shownotif.active{
+    animation: shonotifcation 0.5s linear ;
+}
+@keyframes shonotifcation{
+    from{
+        display: flex;
+    }
+    to{
+        display: none;
+    }
+}
+
 
 table{
     margin-top: 3rem;

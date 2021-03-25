@@ -58,6 +58,7 @@ function submited() {
     let name = document.getElementById("name").value;
     let email1 = document.getElementById("uname").value;
     let pass = document.getElementById("pass").value;
+    let notif = document.querySelector(".shownotif");
     spinner.classList.add("active");
     const data = {
         username: name,
@@ -73,7 +74,8 @@ function submited() {
     .then(response => {
         spinner.classList.remove("active");
         console.log(response);
-
+        document.getElementById("msgg") = response;
+        notif.classList.add("active");
     });
 }
 
