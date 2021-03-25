@@ -9,12 +9,62 @@
 </head>
 <body>
     <h1>Api Testing</h1>
-    <button onclick="fetchall()">Get</button>
-    <table id="tablee">
+    <div class="buttonset">
+        <button onclick="fetchall()">Get</button>
+        <button onclick="switchwer()">Post</button>
+        <button onclick="switchwer2()">Delete</button>
+    </div>
+    
+    <table id="tablee" class="tablss active">
         <tr><th>Name</th><th>Username</th><th>password</th></tr>
     </table>
 
     <p id="output"></p>
+
+    <form action="submit" onsubmit="return false" class="formss">
+        <div class="forma">
+            <div class="names">
+                <p>Name:</p>  
+                <br>
+                <p>Email: </p> 
+                <br>
+                <p>Password:</p> 
+            </div>
+            <div class="inputss">
+                <input id="name" type="text" autocomplete="off">
+                <br>
+                <input id="uname" type="text" autocomplete="off">
+                <br>
+                <input id="pass" type="text" autocomplete="off">
+            </div>
+        </div>
+        
+
+        <button type="submit" style="height: 2.2rem;font-size: 1rem;" onclick="submited()">Upload</button>
+        
+    </form>
+    
+    
+    <form action="submit" onsubmit="return false" class="formss2">
+        <div class="forma2">
+            <div class="names">
+                <p>Name:</p>  
+                
+            </div>
+            <div class="inputss">
+                <input id="name2" type="text" autocomplete="off">
+                
+            </div>
+        </div>
+        
+
+        <button type="submit" style="height: 2.2rem;font-size: 1rem;" onclick="deleted()">Delete</button>
+        
+    </form>
+    
+
+
+
 
     <script src="./app.js"></script>
 </body>

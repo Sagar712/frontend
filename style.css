@@ -49,6 +49,68 @@ tr:nth-child(even){
     height: 2rem;
     background-color: rgb(139, 189, 221);
 }
-th, td{
+th{
+    background-color: rgb(35, 80, 109);
+    color: white;
     border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+
+.forma{
+    display: flex;
+    min-height: 30vh;
+    align-items: center;
+}
+.forma2{
+    display: flex;
+    min-height: 20vh;
+    align-items: center;
+}
+
+.tablss{
+    display: none;
+}
+.tablss.active{
+    display: table;
+}
+
+.formss,.formss2{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.formss.active{
+    display: flex;
+}
+.formss2.active{
+    display: flex;
+}
+.names, .inputss{
+    display: flex;
+    height: 30vh;
+    flex-direction: column; 
+}
+
+input{
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    height: 2rem;
+    background-color: rgb(0, 74, 121);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+p{
+    height: 2.2rem;
+    text-align: end;
+    margin-top: 2.2px;
+}
+
+@media screen and (man-width:(960px)){
+    table{
+        width: 100%;
+    }
+    
 }
