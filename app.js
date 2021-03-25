@@ -1,7 +1,7 @@
 
 let whoup = 0;
 let allres = [];
-const AppUrl = 'http://localhost:3000/script/';
+const AppUrl = 'https://secret-script.herokuapp.com/script/';
 
 
 function fetchall() {
