@@ -5,6 +5,7 @@
 
 body{
     width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -19,15 +20,19 @@ button{
     width: 5rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: rgb(156, 0, 204);
-    color: white;
+    background-color: rgb(122, 167, 194);
+    color: rgb(13, 47, 66);
     border-radius: 5px;
+    box-shadow: 0px 0px 15px -1px rgb(2, 33, 49);
+    margin: 1rem 1rem;
     cursor: pointer;
     
 }
 
 button:active{
-    background-color: rgb(108, 0, 141);
+    background-color: rgb(112, 154, 180);
+    color: rgb(7, 34, 49);
+    box-shadow: 0px 0px 11px -1px rgb(2, 33, 49);
     transform: scale(0.95);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -73,6 +78,9 @@ table{
     border-collapse: collapse;
     text-align: center;
     font-weight: 400;
+    border-radius: 7px;
+    overflow: hidden;
+
 }
 
 tr:nth-child(odd){
@@ -86,16 +94,17 @@ tr:nth-child(even){
 th{
     background-color: rgb(35, 80, 109);
     color: white;
-    border: 1px solid black;
+    border: 1px solid rgb(5, 30, 48);
 }
 td{
-    border: 1px solid black;
+    border: 1px solid rgb(35, 80, 109);
 }
 
 .forma{
     display: flex;
     min-height: 30vh;
     align-items: center;
+    
 }
 .forma2{
     display: flex;
@@ -114,6 +123,10 @@ td{
     display: none;
     flex-direction: column;
     align-items: center;
+    border: 2px solid rgb(13, 50, 75);
+    border-radius: 10px;
+    width: 30vw;
+    
 }
 .formss.active{
     display: flex;
@@ -123,8 +136,8 @@ td{
 }
 .names, .inputss{
     display: flex;
-    height: 30vh;
     flex-direction: column; 
+    height: 100%;
 }
 
 input{
@@ -135,16 +148,20 @@ input{
     background-color: rgb(0, 74, 121);
     color: rgb(255, 255, 255);
     font-size: 1rem;
+    margin: 1rem auto;
 }
 p{
-    height: 2.2rem;
+    height: 1.7rem;
     text-align: end;
-    margin-top: 2.2px;
+    margin: 1.1rem auto;
+    font-size: 1.1rem;
 }
 
-@media screen and (man-width:(960px)){
+@media screen and (max-width:960px){
     table{
-        width: 100%;
+        width: 99vw;
     }
-    
+    .formss,.formss2{
+        width: 95vw;
+    }
 }
